@@ -8,6 +8,7 @@ See https://docs.github.com/en/repositories/creating-and-managing-repositories/c
 3. To clone and open the repository with GitHub Desktop, click Open with GitHub Desktop.
 4. Follow the prompts in GitHub Desktop to complete the clone.
 ## Viewing branches
+See https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-branches-in-your-repository/viewing-branches-in-your-repository for more
 1. On **GitHub**, navigate to the main page of the repository.
 2. From the file tree view on the left, select the branch dropdown menu, then click View all branches. You can also find the branch dropdown menu at the top of the integrated file editor.
 3. Use the navigation at the top of the page to view specific lists of branches:
