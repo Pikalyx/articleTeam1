@@ -1,0 +1,116 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+nav {
+    padding: 30px;
+    text-align: left;
+    font-size: 20px;
+    background-color: rgb(230, 81, 0);
+    color: rgb(255, 255, 255);
+
+}
+
+img.logo {
+    width: 85px;
+    height: 85px;
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    color: rgb(0, 0, 0);
+
+}
+
+.titleScreen {
+    text-align: center;
+    padding: 10px;
+    font-size: 48px;
+    padding-top: 250px;
+    padding-bottom: 500px;
+    background-color: rgb(3, 155, 229);
+    color: rgb(255, 255, 255);
+
+}
+
+.introduction {
+    padding-top: 70px;
+    padding-left: 550px;
+    padding-right: 550px;
+    padding-bottom: 50px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 179, 0);
+
+}
+
+.author {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+    font-style: italic;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 20px;
+    font-style: italic;
+
+}
+
+.p1 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+
+
+}
+
+.p2 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: left
+}
+
+.main {
+    display: flex;
+    gap: 0px;
+
+
+}
+
+.imageLeft {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0px;
+
+}
+
+.pictureText {
+    flex: 1;
+    background: #e0e0e0;
+    padding-left: 75px;
+    padding-right: 350px;
+    border-radius: 8px;
+    margin: 0px;
+    font-size: 20px;
+
+}
+
+footer {
+    background-color: rgb(230, 81, 0);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 550px;
+    text-align: left;
+
+}
