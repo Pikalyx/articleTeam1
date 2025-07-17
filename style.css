@@ -10,9 +10,16 @@ nav {
     font-size: 20px;
     background-color: rgb(230, 81, 0);
     color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 600;
+    position: fixed;
+    width: 100%;
 
 }
 
+nav a:hover {
+    color: rgb(255, 255, 255)
+}
 
 img.logo {
     width: 85px;
@@ -86,8 +93,10 @@ a {
 }
 
 .main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0px;
+    row-gap: 40px;
 }
 
 .mainLeft {
@@ -121,6 +130,16 @@ footer {
 
 }
 
+footer a {
+    color: rgb(21, 10, 174);
+
+}
+
+footer a:hover {
+    color: rgb(81, 61, 213);
+    
+}
+
 .fade-in-section {
   opacity: 0;
   transform: translateY(40px);
@@ -132,3 +151,23 @@ footer {
   opacity: 1;
   transform: none;
 }
+
+footer::after {
+  content: "";
+  height: 0.4em;
+  width: 100%;
+  background: rgb(5, 5, 5);
+  inset-inline-start: 0;
+  top: 140px;
+  position: fixed;
+  transform-origin: top left;
+  animation: grow-progress linear;
+  animation-timeline: scroll();
+  opacity: 0.5;
+}
+
+@keyframes grow-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
