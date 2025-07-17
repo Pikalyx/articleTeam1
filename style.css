@@ -13,6 +13,14 @@ nav {
 
 }
 
+
+img.logo {
+    width: 85px;
+    height: 85px;
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
+}
+
 a {
     color: rgb(0, 0, 0);
 
@@ -70,11 +78,16 @@ a {
     text-align: left
 }
 
+
+.p3 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: left
+}
+
 .main {
     display: flex;
     gap: 0px;
-
-
 }
 
 .mainLeft {
@@ -106,4 +119,16 @@ footer {
     padding-left: 550px;
     text-align: left;
 
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
 }
