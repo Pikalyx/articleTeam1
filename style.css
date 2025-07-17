@@ -16,6 +16,8 @@ nav {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 600;
+    position: fixed;
+    width: 100%;
 }
 
 a {
@@ -123,4 +125,23 @@ footer a {
 
 footer a:hover {
     color: rgb(81, 61, 213);
+}
+
+footer::after {
+  content: "";
+  height: 0.4em;
+  width: 100%;
+  background: rgb(5, 5, 5);
+  inset-inline-start: 0;
+  top: 80px;
+  position: fixed;
+  transform-origin: top left;
+  animation: grow-progress linear;
+  animation-timeline: scroll();
+  opacity: 0.5;
+}
+
+@keyframes grow-progress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
