@@ -1,3 +1,7 @@
+:root {
+    --link-hover-color: rgb(219, 233, 238);
+}
+
 * {
     padding: 0px;
     margin: 0px;
@@ -7,15 +11,20 @@
 nav {
     padding: 30px;
     text-align: left;
-    font-size: 20px;
+    font-size: 22px;
     background-color: rgb(230, 81, 0);
     color: rgb(255, 255, 255);
-
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 a {
     color: rgb(0, 0, 0);
 
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 .titleScreen {
