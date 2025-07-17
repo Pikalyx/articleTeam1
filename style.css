@@ -18,6 +18,18 @@ nav {
     font-weight: 600;
     position: fixed;
     width: 100%;
+
+}
+
+nav a:hover {
+    color: rgb(255, 255, 255)
+}
+
+img.logo {
+    width: 85px;
+    height: 85px;
+    vertical-align: middle;
+    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -81,14 +93,21 @@ nav a:hover {
     text-align: left
 }
 
-.main {
-    display: flex;
-    gap: 0px;
 
-
+.p3 {
+    font-size: 20px;
+    padding: 20px;
+    text-align: left
 }
 
-.imageLeft {
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    row-gap: 40px;
+}
+
+.mainLeft {
     flex: 1;
     background: #f5f5f5;
     padding: 20px;
@@ -97,7 +116,7 @@ nav a:hover {
 
 }
 
-.pictureText {
+.mainRight {
     flex: 1;
     background: #e0e0e0;
     padding-left: 75px;
@@ -125,6 +144,18 @@ footer a {
 
 footer a:hover {
     color: rgb(81, 61, 213);
+
+}
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
 }
 
 footer::after {
@@ -133,7 +164,7 @@ footer::after {
   width: 100%;
   background: rgb(5, 5, 5);
   inset-inline-start: 0;
-  top: 80px;
+  top: 140px;
   position: fixed;
   transform-origin: top left;
   animation: grow-progress linear;
