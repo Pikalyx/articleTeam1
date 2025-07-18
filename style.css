@@ -52,14 +52,11 @@ nav a:hover {
 
 }
 
-.introduction {
-    padding-top: 70px;
-    padding-left: 550px;
-    padding-right: 550px;
-    padding-bottom: 50px;
+.title {
+    text-align: center;
     font-size: 24px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 179, 0);
+    padding-bottom: 20px;
+    font-style: italic;
 
 }
 
@@ -71,33 +68,23 @@ nav a:hover {
 
 }
 
-.title {
-    text-align: center;
+.introduction {
+    padding-top: 70px;
+    padding-left: 550px;
+    padding-right: 550px;
+    padding-bottom: 50px;
     font-size: 24px;
-    padding-bottom: 20px;
-    font-style: italic;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 179, 0);
 
 }
 
-.p1 {
+.introductionParagrph {
     font-size: 20px;
     padding: 20px;
     text-align: left;
 
 
-}
-
-.p2 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: left
-}
-
-
-.p3 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: left
 }
 
 .main {
