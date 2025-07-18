@@ -92,7 +92,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0%;
-    row-gap: 0%;
+    row-gap: 0%; 
 }
 
 .mainLeft {
@@ -113,6 +113,11 @@ nav a:hover {
     margin: 0%;
     font-size: 20px;
 
+}
+
+.mainImage{
+    width: 70%;
+    height: auto;
 }
 
 footer {
