@@ -1,19 +1,24 @@
+:root {
+    --link-hover-color: rgb(219, 233, 238);
+}
+
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0%;
+    margin: 0%;
 
 }
 
 nav {
-    padding: 30px;
+    padding: 2%;
     text-align: left;
-    font-size: 20px;
-    background-color: rgb(230, 81, 0);
+    font-size: 22px;
+    background-color: rgb(3, 155, 229);
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 600;
     position: fixed;
     width: 100%;
+    z-index: 100;
 
 }
 
@@ -25,7 +30,6 @@ img.logo {
     width: 85px;
     height: 85px;
     vertical-align: middle;
-    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -33,115 +37,110 @@ a {
 
 }
 
+nav a:hover {
+    color: var(--link-hover-color);
+}
+
 .titleScreen {
     text-align: center;
-    padding: 10px;
-    font-size: 48px;
-    padding-top: 250px;
-    padding-bottom: 500px;
-    background-color: rgb(3, 155, 229);
+    padding: 10%;
+    font-size: clamp(14px, 6vw, 40px);
+    padding-top: 40%;
+    padding-bottom: 50%;
     color: rgb(255, 255, 255);
+    background-image: url("../../images/Debugempty.png");
 
 }
 
-.introduction {
-    padding-top: 70px;
-    padding-left: 550px;
-    padding-right: 550px;
-    padding-bottom: 50px;
-    font-size: 24px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 179, 0);
+
+.title {
+    text-align: center;
+    font-size: clamp(14px, 6vw, 30px);
+    padding-bottom: 7.5%;
+    font-style: italic;
 
 }
 
 .author {
     text-align: center;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 1%;
     font-style: italic;
 
 }
 
-.title {
+.introduction {
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 10%;
     text-align: center;
     font-size: 24px;
-    padding-bottom: 20px;
-    font-style: italic;
-
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 179, 0);
 }
 
-.p1 {
+.introductionParagrph {
     font-size: 20px;
-    padding: 20px;
+    padding: 2.5%;
     text-align: left;
-
-
-}
-
-.p2 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: left
-}
-
-
-.p3 {
-    font-size: 20px;
-    padding: 20px;
-    text-align: left
 }
 
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    row-gap: 40px;
+    gap: 0%;
+    row-gap: 0%; 
 }
 
 .mainLeft {
     flex: 1;
     background: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 10%;
+    border-radius: 5%;
     margin: 0px;
-
 }
 
 .mainRight {
     flex: 1;
     background: #e0e0e0;
-    padding-left: 75px;
-    padding-right: 350px;
-    border-radius: 8px;
-    margin: 0px;
+    padding-left: 20%;
+    padding-right: 50%;
+    border-radius: 5%;
+    margin: 0%;
     font-size: 20px;
+    margin-right: 20%;
 
 }
 
+.mainImage{
+    width: 70%;
+    height: auto;
+}
+
+
 footer {
     background-color: rgb(230, 81, 0);
-    color: rgb(255, 255, 255);
-    padding: 20px;
-    text-align: left;
+    color: rgb(0, 0, 0);
+    padding: 2.5%;
+    text-align: center;
     font-size: 18px;
-    padding-left: 550px;
-
 }
 
 footer a {
     color: rgb(21, 10, 174);
-
 }
 
+footer a {
+    color: rgb(21, 10, 174);
+}
 footer a:hover {
     color: rgb(81, 61, 213);
-    
-}
 
+}
 .fade-in-section {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(20%);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
@@ -151,22 +150,23 @@ footer a:hover {
   transform: none;
 }
 
-footer::after {
-  content: "";
-  height: 0.4em;
+/* The progress container (grey background) */
+.progress-container {
   width: 100%;
-  background: rgb(5, 5, 5);
-  inset-inline-start: 0;
-  top: 140px;
+  height: 8px;
+  background: #fffcfc;
+  bottom: 0px;
   position: fixed;
-  transform-origin: top left;
-  animation: grow-progress linear;
-  animation-timeline: scroll();
-  opacity: 0.5;
+  z-index: 100;
 }
 
-@keyframes grow-progress {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
-}
 
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #d37f2c;
+  width: 0%;
+  bottom: 0px;
+  position: fixed;
+  z-index: 100;
+}
