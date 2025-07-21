@@ -12,12 +12,13 @@ nav {
     padding: 2%;
     text-align: left;
     font-size: 22px;
-    background-color: rgb(230, 81, 0);
+    background-color: rgb(3, 155, 229);
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 600;
     position: fixed;
     width: 100%;
+    z-index: 1000;
 
 }
 
@@ -29,7 +30,6 @@ img.logo {
     width: 85px;
     height: 85px;
     vertical-align: middle;
-    background-color: rgb(255, 255, 255);
 }
 
 a {
@@ -47,8 +47,8 @@ nav a:hover {
     font-size: 48px;
     padding-top: 30%;
     padding-bottom: 500px;
-    background-color: rgb(3, 155, 229);
     color: rgb(255, 255, 255);
+    background-image: url("../../images/Debugempty.png");
 
 }
 
@@ -77,15 +77,12 @@ nav a:hover {
     font-size: 24px;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 179, 0);
-
 }
 
 .introductionParagrph {
     font-size: 20px;
     padding: 5%;
     text-align: left;
-
-
 }
 
 .main {
@@ -101,7 +98,6 @@ nav a:hover {
     padding: 10%;
     border-radius: 5%;
     margin: 0px;
-
 }
 
 .mainRight {
@@ -159,15 +155,18 @@ footer a:hover {
   width: 100%;
   height: 8px;
   background: #fffcfc;
-  top: 140px;
+  bottom: 0px;
   position: fixed;
+  z-index: 1000;
 }
+
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
   height: 8px;
-  background: #04AA6D;
+  background: #d37f2c;
   width: 0%;
-  top: 140px;
+  bottom: 0px;
   position: fixed;
+  z-index: 1000;
 }
