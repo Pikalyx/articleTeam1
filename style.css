@@ -18,7 +18,7 @@ nav {
     font-weight: 600;
     position: fixed;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
 
 }
 
@@ -38,23 +38,24 @@ a {
 }
 
 nav a:hover {
-  color: var(--link-hover-color);
+    color: var(--link-hover-color);
 }
 
 .titleScreen {
     text-align: center;
     padding: 10%;
-    font-size: 48px;
-    padding-top: 30%;
-    padding-bottom: 500px;
+    font-size: clamp(14px, 6vw, 40px);
+    padding-top: 40%;
+    padding-bottom: 50%;
     color: rgb(255, 255, 255);
     background-image: url("../../images/Debugempty.png");
 
 }
 
+
 .title {
     text-align: center;
-    font-size: 24px;
+    font-size: clamp(14px, 6vw, 30px);
     padding-bottom: 30%;
     font-style: italic;
 
@@ -126,7 +127,6 @@ footer {
     text-align: left;
 }
 
-
 footer a {
     color: rgb(21, 10, 174);
 }
@@ -157,7 +157,7 @@ footer a:hover {
   background: #fffcfc;
   bottom: 0px;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
 }
 
 
@@ -168,5 +168,5 @@ footer a:hover {
   width: 0%;
   bottom: 0px;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
 }
