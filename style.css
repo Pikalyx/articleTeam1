@@ -56,7 +56,7 @@ nav a:hover {
 .title {
     text-align: center;
     font-size: clamp(14px, 6vw, 30px);
-    padding-bottom: 30%;
+    padding-bottom: 7.5%;
     font-style: italic;
 
 }
@@ -64,7 +64,7 @@ nav a:hover {
 .author {
     text-align: center;
     font-size: 20px;
-    padding-bottom: 10%;
+    padding-bottom: 1%;
     font-style: italic;
 
 }
@@ -73,7 +73,7 @@ nav a:hover {
     padding-top: 10%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 30px;
+    padding-bottom: 10%;
     text-align: center;
     font-size: 24px;
     color: rgb(0, 0, 0);
@@ -82,7 +82,7 @@ nav a:hover {
 
 .introductionParagrph {
     font-size: 20px;
-    padding: 5%;
+    padding: 2.5%;
     text-align: left;
 }
 
@@ -109,6 +109,7 @@ nav a:hover {
     border-radius: 5%;
     margin: 0%;
     font-size: 20px;
+    margin-right: 20%;
 
 }
 
@@ -117,14 +118,13 @@ nav a:hover {
     height: auto;
 }
 
+
 footer {
     background-color: rgb(230, 81, 0);
     color: rgb(0, 0, 0);
     padding: 2.5%;
-    text-align: left;
+    text-align: center;
     font-size: 18px;
-    padding-left: 35%;
-    text-align: left;
 }
 
 footer a {
