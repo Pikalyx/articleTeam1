@@ -128,13 +128,16 @@ footer {
     font-size: 18px;
     padding-left: 35%;
     text-align: left;
-
 }
+
 
 footer a {
     color: rgb(21, 10, 174);
 }
 
+footer a {
+    color: rgb(21, 10, 174);
+}
 footer a:hover {
     color: rgb(81, 61, 213);
 
