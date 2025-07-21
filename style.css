@@ -154,21 +154,20 @@ footer a:hover {
   transform: none;
 }
 
-footer::after {
-  content: "";
-  height: 0.4em;
+/* The progress container (grey background) */
+.progress-container {
   width: 100%;
-  background: rgb(5, 5, 5);
-  inset-inline-start: 0;
+  height: 8px;
+  background: #fffcfc;
   top: 140px;
   position: fixed;
-  transform-origin: top left;
-  animation: grow-progress linear;
-  animation-timeline: scroll();
-  opacity: 0.5;
 }
 
-@keyframes grow-progress {
-  from { transform: scaleX(0); }
-  to { transform: scaleX(1); }
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+  top: 140px;
+  position: fixed;
 }
