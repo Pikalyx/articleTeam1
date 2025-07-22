@@ -122,9 +122,10 @@ nav a:hover {
 footer {
     background-color: rgb(230, 81, 0);
     color: rgb(0, 0, 0);
-    padding: 2.5%;
+    padding: 2rem;
     text-align: center;
     font-size: 18px;
+    
 }
 
 footer a {
@@ -136,37 +137,182 @@ footer a {
 }
 footer a:hover {
     color: rgb(81, 61, 213);
+}
 
-}
 .fade-in-section {
-  opacity: 0;
-  transform: translateY(20%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  will-change: opacity, transform;
-}
+    opacity: 0;
+    transform: translateY(20%);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+    }
 
 .fade-in-section.is-visible {
-  opacity: 1;
-  transform: none;
-}
+    opacity: 1;
+    transform: none;
+    }
 
 /* The progress container (grey background) */
 .progress-container {
-  width: 100%;
-  height: 8px;
-  background: #fffcfc;
-  bottom: 0px;
-  position: fixed;
-  z-index: 100;
-}
+    width: 100%;
+    height: 8px;
+    background: #fffcfc;
+    bottom: 0px;
+    position: fixed;
+    z-index: 100;
+    }
 
 
 /* The progress bar (scroll indicator) */
 .progress-bar {
-  height: 8px;
-  background: #d37f2c;
-  width: 0%;
-  bottom: 0px;
-  position: fixed;
-  z-index: 100;
+    height: 8px;
+    background: #d37f2c;
+    width: 0%;
+    bottom: 0px;
+    position: fixed;
+    z-index: 100;
+}
+
+/* Tablet Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: flex;
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .flex-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .flex-item {
+        min-width: auto;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card .icon {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.dynamic-text {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+/* Responsive Images */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* CSS Grid with Auto-fit */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Interactive Elements */
+.interactive-demo {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.demo-button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.demo-button:hover {
+    background: #5a67d8;
+    transform: scale(1.05);
+}
+
+.demo-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
 }
