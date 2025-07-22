@@ -22,6 +22,14 @@ nav {
 
 }
 
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
 nav a:hover {
     color: rgb(255, 255, 255)
 }
