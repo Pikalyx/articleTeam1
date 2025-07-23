@@ -12,16 +12,16 @@ function showScreenSize() {
     const height = window.innerHeight;
     const output = document.getElementById('demoOutput');
     const screenWidth = document.getElementById('screenWidth');
-    
+
     screenWidth.textContent = width;
-    
+
     let deviceType = '';
     if (width < 480) deviceType = 'Mobile';
     else if (width < 768) deviceType = 'Large Mobile';
     else if (width < 1024) deviceType = 'Tablet';
     else if (width < 1200) deviceType = 'Desktop';
     else deviceType = 'Large Desktop';
-    
+
     output.innerHTML = `
         Screen: ${width}px × ${height}px<br>
         Device Type: ${deviceType}<br>
@@ -53,3 +53,13 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
     }
 });
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () { myFunction() };
+
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    Fdocument.getElementById("myBar").style.width = scrolled + "%";
+};

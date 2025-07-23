@@ -1,6 +1,6 @@
 :root {
-    --primary: #667eea;
-    --secondary: #764ba2;
+    --primary: #E65100;
+    --secondary: #FFB300;
     --light: #ffffff;
     --dark: #333;
     --text-light: #666;
@@ -85,11 +85,12 @@ body {
     text-align: center;
     color: var(--light);
     margin-bottom: 2rem;
+    padding: 17rem 0rem;
 }
 
 .titleScreen h1 {
     font-size: clamp(2rem, 5vw, 3rem);
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    background: #ffffff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -143,31 +144,20 @@ body {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
-.mainImage {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 10px;
+.mainLeft {
+    background-image: url("../../images/underconstructionPlaceholder.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-.fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.mainMerged {
+    display: none;
 }
 
 footer {
-    background: rgba(255, 255, 255, 0.95);
+    background: #039BE5;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
@@ -177,6 +167,10 @@ footer {
 
 /* Mobile Nav */
 @media (max-width: 768px) {
+    h3 {
+        width: 100%;
+    }
+    
     .nav-links {
         display: none;
         flex-direction: column;
@@ -192,4 +186,26 @@ footer {
     .mobile-menu {
         display: flex;
     }
+
+    .mainLeft,
+    .mainRight {
+        display: none;
+    }
+    
+    .mainMerged {
+        flex-wrap: wrap;
+        display: flex;
+        flex: 1 1 300px;
+        min-width: 280px;
+        background: rgba(255, 255, 255, 0.95);
+        word-wrap: break-word;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        background-image: url("../../images/underconstructionPlaceholder.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        }
 }
