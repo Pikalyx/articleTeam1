@@ -148,7 +148,7 @@ body {
     background-image: url("images/underconstructionPlaceholder.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
     background-position: left;
 }
 
