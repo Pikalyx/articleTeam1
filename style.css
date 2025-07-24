@@ -145,7 +145,7 @@ body {
 }
 
 .mainLeft {
-    background-image: url("../../images/underconstructionPlaceholder.jpg");
+    background-image: url("images/underconstructionPlaceholder.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -206,7 +206,7 @@ footer h2, footer p {
         padding: 2rem;
         border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-        background-image: url("../../images/underconstructionPlaceholder.jpg");
+        background-image: url("images/underconstructionPlaceholder.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
