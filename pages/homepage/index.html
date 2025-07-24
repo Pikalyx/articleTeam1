@@ -7,16 +7,15 @@
   <title>Article One | OppNet</title>
   <link rel="icon" href="../../images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../../style.css"/>
+  <link rel="stylesheet" href="../../style.css" />
 </head>
 
 <body>
   <div class="container">
-    <!-- Navigation -->
     <nav class="nav">
       <div class="logo">
         <img src="../../images/favicon.ico" alt="OppNet Logo" />
-        Opportunity Network
+        OppNet
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="#contact">Contact</a></li>
@@ -37,15 +36,15 @@
     <div class="introduction">
       <p class="author">By placeholder</p>
       <p class="title">temp name</p>
-      <p class="introductionParagrph">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
-      <p class="introductionParagrph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
+      <p class="introductionParagraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit...</p>
+      <p class="introductionParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
     </div>
 
     <!-- Main Content with dynamic left/right pairs -->
     <div class="main">
       <div class="row">
         <div class="mainLeft">
-          
+
         </div>
         <div class="mainRight">
           <h3>Right Side</h3>
@@ -68,7 +67,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
         </div>
-        
+
         <div class="mainMerged">
           <h3>Merged</h3>
           <p>More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit...
@@ -92,7 +91,7 @@
 
       <div class="row">
         <div class="mainLeft">
-          
+
         </div>
         <div class="mainRight">
           <h3>Right Side</h3>
@@ -102,9 +101,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
-          
+
         </div>
-        
+
         <div class="mainMerged">
           <h3>Merged</h3>
           <p>More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit...
@@ -125,8 +124,8 @@
           </p>
         </div>
       </div>
-      
-      
+
+
     </div>
 
     <!-- Footer -->
@@ -139,6 +138,30 @@
     </footer>
   </div>
 
+  <div class="survey-box" id="surveyBox">
+    <h2>Rate Your Experience</h2>
+    <form id="ratingForm">
+      <div class="rating">
+        <input type="radio" name="star" id="star5" value="5" required>
+        <label for="star5">★</label>
+        <input type="radio" name="star" id="star4" value="4">
+        <label for="star4">★</label>
+        <input type="radio" name="star" id="star3" value="3">
+        <label for="star3">★</label>
+        <input type="radio" name="star" id="star2" value="2">
+        <label for="star2">★</label>
+        <input type="radio" name="star" id="star1" value="1">
+        <label for="star1">★</label>
+      </div>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="thank-you" id="thankYou" style="display: none; text-align: center;">
+    <h2>⭐ Thank you for your feedback! ⭐</h2>
+  </div>
+
   <!-- Mobile Nav Script -->
   <script>
     const mobileMenu = document.getElementById('mobileMenu');
@@ -146,6 +169,17 @@
 
     mobileMenu.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+  </script>
+  <script>
+    const form = document.getElementById('ratingForm');
+    const surveyBox = document.getElementById('surveyBox');
+    const thankYou = document.getElementById('thankYou');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      surveyBox.style.display = 'none';
+      thankYou.style.display = 'block';
     });
   </script>
 </body>

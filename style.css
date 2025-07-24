@@ -113,7 +113,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.introductionParagrph {
+.introductionParagraph {
     margin-bottom: 1rem;
     color: var(--text-light);
 }
@@ -170,7 +170,7 @@ footer {
     h3 {
         width: 100%;
     }
-    
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -191,7 +191,7 @@ footer {
     .mainRight {
         display: none;
     }
-    
+
     .mainMerged {
         flex-wrap: wrap;
         display: flex;
@@ -207,5 +207,52 @@ footer {
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
-        }
+    }
+}
+
+.rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    display: inline-flex;
+    font-size: 2rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating input:checked~label,
+.rating label:hover,
+.rating label:hover~label {
+    color: gold;
+}
+
+.survey-box {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #E65100;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
