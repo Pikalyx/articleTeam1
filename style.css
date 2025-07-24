@@ -165,7 +165,7 @@ footer {
     color: var(--text-light);
 }
 
-footer h2, p {
+footer h2, footer p {
     color: white;
 }
 
