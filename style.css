@@ -165,6 +165,10 @@ footer {
     color: var(--text-light);
 }
 
+footer h2, p {
+    color: white;
+}
+
 /* Mobile Nav */
 @media (max-width: 768px) {
     h3 {
