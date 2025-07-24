@@ -148,8 +148,8 @@ body {
     background-image: url("images/underconstructionPlaceholder.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: left;
 }
 
 .mainMerged {
@@ -209,7 +209,7 @@ footer h2, footer p {
         background-image: url("images/underconstructionPlaceholder.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: cover;
+        background-size:contain;
         background-position: center;
     }
 }
