@@ -125,7 +125,31 @@
         </div>
       </div>
 
+    </div>
+    <div class="survey-box" id="surveyBox">
+      <h2>Rate Your Experience</h2>
+      <form id="ratingForm">
+        <div class="rating">
+          <input type="radio" name="star" id="star5" value="5" required>
+          <label for="star5">★</label>
+          <input type="radio" name="star" id="star4" value="4">
+          <label for="star4">★</label>
+          <input type="radio" name="star" id="star3" value="3">
+          <label for="star3">★</label>
+          <input type="radio" name="star" id="star2" value="2">
+          <label for="star2">★</label>
+          <input type="radio" name="star" id="star1" value="1">
+          <label for="star1">★</label>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
 
+    <div class="thank-you" id="thankYou" style="display: none; text-align: center;">
+      <br>
+      <h2>⭐ Thank you for your feedback! ⭐</h2>
+      <br>
     </div>
 
     <!-- Footer -->
@@ -138,33 +162,6 @@
     </footer>
   </div>
 
-  <div class="survey-box" id="surveyBox">
-    <h2>Rate Your Experience</h2>
-    <form id="ratingForm">
-      <div class="rating">
-        <input type="radio" name="star" id="star5" value="5" required>
-        <label for="star5">★</label>
-        <input type="radio" name="star" id="star4" value="4">
-        <label for="star4">★</label>
-        <input type="radio" name="star" id="star3" value="3">
-        <label for="star3">★</label>
-        <input type="radio" name="star" id="star2" value="2">
-        <label for="star2">★</label>
-        <input type="radio" name="star" id="star1" value="1">
-        <label for="star1">★</label>
-      </div>
-      <br>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-
-  <div class="thank-you" id="thankYou" style="display: none; text-align: center;">
-    <h2>⭐ Thank you for your feedback! ⭐</h2>
-  </div>
-
-  
-  
-  <!-- Break for the end of the website -->
   <!-- Mobile Nav Script -->
   <script>
     const mobileMenu = document.getElementById('mobileMenu');
