@@ -152,15 +152,67 @@ body {
 }
 
 #image1 {
-    background-image: url("images/underconstructionPlaceholder.jpg");
+    background-image: url("images/underConstructionPlaceholder.jpg"), url("images/debugEmpty.png");
 }
 
 #image2 {
-    background-image: url("images/Debugempty.png");
+    background-image: url("images/underConstructionPlaceholder.jpg"), url("images/debugEmpty.png");
 }
 
 .mainMerged {
     display: none;
+}
+
+.Advertise {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Adjust spacing between grid items */
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+/* Make sure each advertisement item fills the grid cell properly */
+.Advertise > div {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Adaptive height - each item will size based on content */
+}
+
+.Game {
+    width: 100%;
+    min-height: 200px; /* Set a minimum height for the image containers */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#game1 {
+    background-image: url("images/danielLiuGame.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#game2 {
+    background-image: url("images/solomonGame.png");
+}
+
+#game3 {
+    background-image: url("images/anthonyImage.png");
+}
+
+/* Responsive design - stack on smaller screens */
+@media (max-width: 768px) {
+    .Advertise {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .Advertise {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+    }
 }
 
 footer {
@@ -172,7 +224,8 @@ footer {
     color: var(--text-light);
 }
 
-footer h2, footer p {
+footer h2,
+footer p {
     color: white;
 }
 
@@ -215,7 +268,7 @@ footer h2, footer p {
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size:cover;
+        background-size: cover;
         background-position: center;
     }
 }
