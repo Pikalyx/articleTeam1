@@ -152,11 +152,11 @@ body {
 }
 
 #image1 {
-    background-image: url("images/underConstructionPlaceholder.jpg"), url("images/debugEmpty.png");
+    background-image: url("images/underConstructionPlaceholder.jpg");
 }
 
 #image2 {
-    background-image: url("images/underConstructionPlaceholder.jpg"), url("images/debugEmpty.png");
+    background-image: url("images/underConstructionPlaceholder.jpg");
 }
 
 .mainMerged {
@@ -213,6 +213,10 @@ body {
     .Advertise {
     grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
     }
+    
+    .mainLeft {
+        background-size: cover;
+    }
 }
 
 footer {
@@ -228,6 +232,8 @@ footer h2,
 footer p {
     color: white;
 }
+
+
 
 /* Mobile Nav */
 @media (max-width: 768px) {
