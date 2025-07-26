@@ -26,16 +26,46 @@ body {
 }
 
 .nav {
+    /* Centering */
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 63%;
+    position: fixed;
+    /*  */
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--light);
     backdrop-filter: blur(10px);
     padding: 1rem 2rem;
     border-radius: 15px;
     margin-bottom: 2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    /* Start completely hidden */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    
+    /* Multiple transition properties for better compatibility */
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    
+    /* Force hardware acceleration */
+    -webkit-transform: translateY(-100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.nav.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
 }
 
 .logo {

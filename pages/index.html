@@ -12,13 +12,14 @@
 
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" id="navbar">
       <div class="logo">
         <img src="../images/favicon.ico" alt="OppNet Logo" />
         OppNet
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#Top">Top</a></li>
+        <li><a href="#contact">End</a></li>
       </ul>
       <div class="mobile-menu" id="mobileMenu">
         <span></span>
@@ -28,7 +29,7 @@
     </nav>
 
     <!-- Title Section -->
-    <div class="titleScreen">
+    <div class="titleScreen" id="Top">
       <h1>Placeholder title section; Article One</h1>
     </div>
 
@@ -199,27 +200,7 @@
       <p>&copy; 2025 OppNet</p>
     </footer>
   </div>
-
-  <!-- Mobile Nav Script -->
-  <script>
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenu.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-  <script>
-    const form = document.getElementById('ratingForm');
-    const surveyBox = document.getElementById('surveyBox');
-    const thankYou = document.getElementById('thankYou');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      surveyBox.style.display = 'none';
-      thankYou.style.display = 'block';
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 
 </html>
