@@ -1,65 +1,94 @@
-// Mobile menu toggle
-const mobileMenu = document.getElementById('mobileMenu');
-const navLinks = document.getElementById('navLinks');
-
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
-
-// Show screen size
-function showScreenSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const output = document.getElementById('demoOutput');
-    const screenWidth = document.getElementById('screenWidth');
-
-    screenWidth.textContent = width;
-
-    let deviceType = '';
-    if (width < 480) deviceType = 'Mobile';
-    else if (width < 768) deviceType = 'Large Mobile';
-    else if (width < 1024) deviceType = 'Tablet';
-    else if (width < 1200) deviceType = 'Desktop';
-    else deviceType = 'Large Desktop';
-
-    output.innerHTML = `
-        Screen: ${width}px × ${height}px<br>
-        Device Type: ${deviceType}<br>
-        Orientation: ${width > height ? 'Landscape' : 'Portrait'}
-    `;
-}
-
-// Theme toggle
-let isDark = false;
-function toggleTheme() {
-    isDark = !isDark;
-    document.body.style.filter = isDark ? 'invert(1) hue-rotate(180deg)' : 'none';
-}
-
-// Update screen size on resize
-window.addEventListener('resize', showScreenSize);
-
-// Initial screen size display
-showScreenSize();
-
-// Add scroll effects
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById("navbar");
+    var debug = document.getElementById("debug");
+    var scrollCount = 0;
+    
+    function updateDebug(message) {
+    if (debug) {
+        debug.innerHTML = message;
+    }
+    }
+    
+  // Initial debug
+    updateDebug("DOM loaded. Navbar found: " + (navbar ? "YES" : "NO"));
+    
+    if (navbar) {
+    // Test if we can add/remove classes manually first
+    setTimeout(function() {
+        updateDebug("Testing manual class toggle...");
+        navbar.classList.add("show");
+        
+        setTimeout(function() {
+        navbar.classList.remove("show");
+        updateDebug("Manual toggle test complete. Setting up scroll listener...");
+        }, 2000);
+    }, 1000);
+    
+    // Mobile-fixed scroll handler
+    function handleScroll() {
+        scrollCount++;
+        
+      // Try multiple methods to get scroll position (mobile fix)
+        var scrollTop = Math.max(
+        window.pageYOffset || 0,
+        document.documentElement.scrollTop || 0,
+        document.body.scrollTop || 0,
+        window.scrollY || 0
+        );
+        
+      // Alternative method for stubborn mobile browsers
+        if (scrollTop === 0) {
+        var rect = document.body.getBoundingClientRect();
+        scrollTop = Math.abs(rect.top);
+        }
+        
+        var message = "Scroll #" + scrollCount + "<br>";
+        message += "ScrollTop: " + Math.round(scrollTop) + "px<br>";
+        message += "Threshold: 150px<br>";
+        message += "Method: " + (scrollTop > 0 ? "SUCCESS" : "FAILED") + "<br>";
+        
+        if (scrollTop > 150) {
+        navbar.classList.add("show");
+        message += "Status: SHOWING navbar<br>";
+        message += "HasClass: " + navbar.classList.contains("show");
+        } else {
+        navbar.classList.remove("show");
+        message += "Status: HIDING navbar<br>";
+        message += "HasClass: " + navbar.classList.contains("show");
+        }
+        
+        updateDebug(message);
+    }
+    
+    // Multiple event listeners for better compatibility
+    window.addEventListener('scroll', handleScroll, false);
+    document.addEventListener('scroll', handleScroll, false);
+    
+    // Also try with passive listeners
+    if (window.addEventListener) {
+        try {
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        } catch(e) {
+        // Passive not supported, already added regular listener above
+        }
+    }
+    
+    // Touch events for mobile
+    document.addEventListener('touchmove', function() {
+        setTimeout(handleScroll, 50);
+    }, false);
+    
+    // Force a scroll check after a delay
+    setTimeout(function() {
+        updateDebug("Forcing initial scroll check...");
+        handleScroll();
+    }, 3000);
     }
 });
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () { myFunction() };
-
-function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    Fdocument.getElementById("myBar").style.width = scrolled + "%";
-};
+// Additional mobile debugging
+window.addEventListener('load', function() {
+    console.log("Window loaded");
+    console.log("User agent:", navigator.userAgent);
+    console.log("Screen size:", window.innerWidth + "x" + window.innerHeight);
+});
