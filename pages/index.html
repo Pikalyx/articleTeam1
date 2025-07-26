@@ -200,27 +200,6 @@
       <p>&copy; 2025 OppNet</p>
     </footer>
   </div>
-
-  <!-- Mobile Nav Script -->
-  <script>
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenu.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-  <script>
-    const form = document.getElementById('ratingForm');
-    const surveyBox = document.getElementById('surveyBox');
-    const thankYou = document.getElementById('thankYou');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      surveyBox.style.display = 'none';
-      thankYou.style.display = 'block';
-    });
-  </script>
   <script src="app.js"></script>
 </body>
 

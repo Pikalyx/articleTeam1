@@ -92,3 +92,22 @@ window.addEventListener('load', function() {
     console.log("User agent:", navigator.userAgent);
     console.log("Screen size:", window.innerWidth + "x" + window.innerHeight);
 });
+
+// Mobile Nav
+const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Survey Script
+const form = document.getElementById('ratingForm');
+    const surveyBox = document.getElementById('surveyBox');
+    const thankYou = document.getElementById('thankYou');
+    
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    surveyBox.style.display = 'none';
+    thankYou.style.display = 'block';
+});
