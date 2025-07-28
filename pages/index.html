@@ -5,20 +5,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Article One | OppNet</title>
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../style.css" />
+  <!-- Favicon specific -->
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- Firefox Favicon Troubleshooting -->
+  <link href="favicon.svg" rel="icon" sizes="any">
 </head>
 
 <body>
   <div class="container">
-    <nav class="nav">
+    <nav class="nav" id="navbar">
       <div class="logo">
-        <img src="../images/favicon.ico" alt="OppNet Logo" />
+        <img src="favicon.ico" alt="OppNet Logo" />
         OppNet
       </div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#Top">Top</a></li>
+        <li><a href="#contact">End</a></li>
       </ul>
       <div class="mobile-menu" id="mobileMenu">
         <span></span>
@@ -28,7 +33,7 @@
     </nav>
 
     <!-- Title Section -->
-    <div class="titleScreen">
+    <div class="titleScreen" id="Top">
       <h1>Placeholder title section; Article One</h1>
     </div>
 
@@ -43,7 +48,7 @@
     <!-- Main Content with dynamic left/right pairs -->
     <div class="main">
       <div class="row">
-        <div class="mainLeft">
+        <div class="mainLeft" id="image1">
 
         </div>
         <div class="mainRight">
@@ -68,7 +73,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod...</p>
         </div>
 
-        <div class="mainMerged">
+        <div class="mainMerged" id="image1">
           <h3>Merged</h3>
           <p>More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit...
             More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -90,7 +95,7 @@
       </div>
 
       <div class="row">
-        <div class="mainLeft">
+        <div class="mainLeft" id="image2">
 
         </div>
         <div class="mainRight">
@@ -104,7 +109,7 @@
 
         </div>
 
-        <div class="mainMerged">
+        <div class="mainMerged" id="image2">
           <h3>Merged</h3>
           <p>More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit...
             More article text continues here. Lorem ipsum dolor sit amet consectetur adipisicing elit
@@ -152,6 +157,44 @@
       <br>
     </div>
 
+    <div class="Advertise">
+<!-- First Game -->
+      <div>
+        <div class="Game" id="game1">
+        </div>
+        <a href="https://daniel-liu2020.github.io/-OppNet-Journey-/" target="_blank">Play Now</a>
+        <div class="Game">
+          <p>
+            A quiet game about choices, silence, and being seen. In this game, you step into the story of a student navigating the unspoken codes of opportunity—applications, rejections, performance, and the subtle rules that shape belonging. Each decision branches from emotion, not strategy. Whether you apply or not, speak or stay silent, the game holds space for all paths. This is not a game to win. It’s a space to feel your way
+            through. To be seen—even when you don’t say a word.
+          </p>
+        </div>
+      </div>
+<!-- Second Game -->
+      <div>
+        <div class="Game" id="game2">
+        </div>
+        <a href="https://tackie-s.github.io/Post_Graduate-Twine/" target="_blank">Play Now</a>
+        <div class="Game">
+          <p>
+            You're about to graduate high school… Now what? Post-Grad Pathfinder is an interactive story game where you explore real-world decisions about life after high school. Whether you’re headed to college, looking for a job, considering a gap year, or unsure about your major, this game places you in the shoes of a graduating Fellow navigating these paths. Through conversations with mentors, experiences on campus, internships, peer advice, and even moments of doubt, you’ll uncover what feels right for you. The game is built to reflect real-life complexities, there’s no one-size-fits-all route here. Make choices, gather knowledge, and carve out your next chapter on your terms.
+          </p>
+        </div>
+      </div>
+<!-- Third Game -->
+      <div>
+        <div class="Game" id="game3">
+        </div>
+        <a href="https://cs-anthony.github.io/interviewPrep-twine/" target="_blank">Play Now</a>
+        <div class="Game">
+          <p>
+            In the game, the player has an upcoming interview in two days for an internship they applied for, but they have never done an interview before. They have a variety of choices to choose from in order to prepare them for the interview. But be careful as they take up your time depending on the choices you made. You may or may not be able to go through all the choices, and different choices will lead to different levels of preparedness, which is important when the day for the interview comes. Depending on your choices, especially on interview day, you may secure the internship position. Good luck!
+          </p>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Footer -->
     <footer id="contact">
       <h2>Contact</h2>
@@ -161,27 +204,7 @@
       <p>&copy; 2025 OppNet</p>
     </footer>
   </div>
-
-  <!-- Mobile Nav Script -->
-  <script>
-    const mobileMenu = document.getElementById('mobileMenu');
-    const navLinks = document.getElementById('navLinks');
-
-    mobileMenu.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-    });
-  </script>
-  <script>
-    const form = document.getElementById('ratingForm');
-    const surveyBox = document.getElementById('surveyBox');
-    const thankYou = document.getElementById('thankYou');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      surveyBox.style.display = 'none';
-      thankYou.style.display = 'block';
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 
 </html>
