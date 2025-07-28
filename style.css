@@ -218,6 +218,21 @@ body {
     background-repeat: no-repeat;
 }
 
+#game1:hover {
+    transform: scale(1.005);
+    transition: transform 0.1s ease;
+}
+
+#game2:hover {
+    transform: scale(1.005);
+    transition: transform 0.1s ease;
+}
+
+#game3:hover {
+    transform: scale(1.005);
+    transition: transform 0.1s ease;
+}
+
 #game1 {
     background-image: url("images/danielLiuGame.png");
     background-size: cover;
@@ -306,8 +321,16 @@ footer p {
         background-attachment: fixed;
         background-size: cover;
         background-position: center;
+        color: white;
+    }
+
+    .mainMerged p {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 10px;
     }
 }
+
 
 .rating {
     direction: rtl;
