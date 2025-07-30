@@ -219,18 +219,18 @@ body {
 }
 
 #game1:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game2:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game3:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game1 {
