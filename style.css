@@ -201,7 +201,7 @@ body {
 }
 
 /* Make sure each advertisement item fills the grid cell properly */
-.Advertise > div {
+.Advertise div {
     display: flex;
     flex-direction: column;
     height: auto; /* Adaptive height - each item will size based on content */
@@ -344,11 +344,13 @@ footer p {
         color: white;
         background-size: 100%, 100%;
     }
-
+    
     .mainMerged p, .mainMerged h2, .mainMerged h3, .mainMerged h4, .mainMerged ul {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
         border-radius: 0px;
+        width: 100%;
+        display: block;
     }
     
     #image1 {
