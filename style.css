@@ -116,6 +116,10 @@ body {
     color: var(--light);
     margin-bottom: 2rem;
     padding: 17rem 0rem;
+    background-image: url("images/underConstructionPlaceholder.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .titleScreen h1 {
@@ -177,6 +181,10 @@ body {
     background-image: url("images/underConstructionPlaceholder.jpg");
 }
 
+#image4 {
+    background-image: url("images/underConstructionPlaceholder.jpg");
+}
+
 .mainMerged {
     display: none;
 }
@@ -187,6 +195,7 @@ body {
     gap: 20px;
     /* Adjust spacing between grid items */
     padding: 20px;
+    margin: 2.5% 0%;
     background-color: white;
     border-radius: 15px;
 }
@@ -221,6 +230,21 @@ body {
     transition: transform 0.2s ease;
 }
 
+#game4:hover {
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
+}
+
+#game5:hover {
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
+}
+
+#game6:hover {
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
+}
+
 #game1 {
     background-image: url("images/danielLiuGame.png");
     background-size: cover;
@@ -232,7 +256,19 @@ body {
 }
 
 #game3 {
-    background-image: url("images/anthonyImage.png");
+    background-image: url("images/anthonyGame.png");
+}
+
+#game4 {
+    background-image: url("images/frankGame.png");
+}
+
+#game5 {
+    background-image: url("images/stephanieGame.png");
+}
+
+#game6 {
+    background-image: url("images/geraldoGame.png");
 }
 
 /* Responsive design - stack on smaller screens */
