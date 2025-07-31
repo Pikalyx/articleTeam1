@@ -173,10 +173,6 @@ body {
     background-image: url("images/underConstructionPlaceholder.jpg");
 }
 
-#image3 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
-}
-
 .mainMerged {
     display: none;
 }
