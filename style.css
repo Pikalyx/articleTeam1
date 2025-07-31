@@ -378,3 +378,7 @@ button {
 button:hover {
     background-color: #039BE5;
 }
+p {
+  margin-bottom: 1em; /* 或 16px、24px 根据喜好 */
+  line-height: 1.6;
+}
