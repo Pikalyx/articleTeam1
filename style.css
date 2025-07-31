@@ -125,27 +125,9 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.introduction {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-}
-
-.author {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
 .title {
     font-style: italic;
     margin-bottom: 1rem;
-}
-
-.introductionParagraph {
-    margin-bottom: 1rem;
-    color: var(--text-light);
 }
 
 /* Main Content */
@@ -175,17 +157,23 @@ body {
 }
 
 .mainLeft {
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: contain;
-    background-position: 20% 50%;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment:local;
+    background-size: 100%, 100%;
 }
 
 #image1 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
+    background-position: 100% 40%, 100% 60%;
+    height: auto;
+    background-color: rgba(255,255,230,1);
 }
 
 #image2 {
+    background-image: url("images/underConstructionPlaceholder.jpg");
+}
+
+#image3 {
     background-image: url("images/underConstructionPlaceholder.jpg");
 }
 
@@ -219,18 +207,18 @@ body {
 }
 
 #game1:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game2:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game3:hover {
-    transform: scale(1.005);
-    transition: transform 0.1s ease;
+    transform: scale(1.008);
+    transition: transform 0.2s ease;
 }
 
 #game1 {
@@ -317,18 +305,25 @@ footer p {
         padding: 2rem;
         border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
         color: white;
+        background-size: 100%, 100%;
     }
 
-    .mainMerged p {
+    .mainMerged p, .mainMerged h2, .mainMerged h3, .mainMerged h4, .mainMerged ul {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 0px;
     }
+    
+    #image1 {
+        background-repeat: no-repeat;
+        background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
+        background-position: 100% 40%, 100% 60%;
+        height: auto;
+        background-color: rgba(255,255,230, 1);
+        background-attachment: local;
+    }
+    
 }
 
 
