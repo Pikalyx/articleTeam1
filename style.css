@@ -166,7 +166,7 @@ body {
     background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
     background-position: 100% 40%, 100% 60%;
     height: auto;
-    background-color: rgba(255,255,230,255);
+    background-color: rgba(255,255,230,1);
 }
 
 #image2 {
@@ -301,18 +301,25 @@ footer p {
         padding: 2rem;
         border-radius: 15px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
         color: white;
+        background-size: 100%, 100%;
     }
 
-    .mainMerged p {
+    .mainMerged p, .mainMerged h2, .mainMerged h3, .mainMerged h4, .mainMerged ul {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
-        border-radius: 10px;
+        border-radius: 0px;
     }
+    
+    #image1 {
+        background-repeat: no-repeat;
+        background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
+        background-position: 100% 40%, 100% 60%;
+        height: auto;
+        background-color: rgba(255,255,230, 1);
+        background-attachment: local;
+    }
+    
 }
 
 
