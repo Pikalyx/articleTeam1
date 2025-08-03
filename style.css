@@ -6,7 +6,7 @@
     --text-light: #666;
     --blue: #039BE5;
     --green: #30C231;
-    
+
 }
 
 * {
@@ -52,18 +52,19 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100%);
-    
+
     /* Multiple transition properties for better compatibility */
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    
+
     /* Force hardware acceleration */
     -webkit-transform: translateY(-100%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .nav.show {
     opacity: 1;
     visibility: visible;
@@ -100,6 +101,7 @@ body {
 .nav-links a:hover {
     color: var(--primary);
 }
+
 /* Mobile Nav bar collapse */
 .mobile-menu {
     display: none;
@@ -168,20 +170,25 @@ body {
 
 .mainLeft {
     background-repeat: no-repeat, no-repeat;
-    background-attachment:local;
+    background-attachment: local;
     background-size: 100%, 100%;
 }
 
 #image1 {
     background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
     background-position: 100% 40%, 100% 60%;
-    background-color: rgba(255,255,230,1);
+    background-color: rgba(255, 255, 230, 1);
 }
 
- /* Fix image to show up while gradient is present */
+/* Fix image to show up while gradient is present */
 #image2 {
-    background-image: url("images/inaImage1.png"), url("images/inaImage2.png");
-    background-position: 100% 40%, 100% 70%;
+    background:
+        linear-gradient(135deg, var(--blue), var(--green)),
+        url("images/inaImage1.png"),
+        url("images/inaImage2.png");
+    background-position: 100% 40%, 100% 70%, center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #image3 {
@@ -211,15 +218,17 @@ body {
 }
 
 /* Make sure each advertisement item fills the grid cell properly */
-.Advertise > div {
+.Advertise>div {
     display: flex;
     flex-direction: column;
-    height: auto; /* Adaptive height - each item will size based on content */
+    height: auto;
+    /* Adaptive height - each item will size based on content */
 }
 
 .Game {
     width: 100%;
-    min-height: 200px; /* Set a minimum height for the image containers */
+    min-height: 200px;
+    /* Set a minimum height for the image containers */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -257,15 +266,17 @@ body {
 /* Responsive design - stack on smaller screens */
 @media (max-width: 768px) {
     .Advertise {
-    grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
     }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .Advertise {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on tablets */
     }
-    
+
     .mainLeft {
         background-size: cover;
     }
@@ -328,23 +339,27 @@ footer p {
         background-size: 100%, 100%;
     }
 
-    .mainMerged p, .mainMerged h2, .mainMerged h3, .mainMerged h4, .mainMerged ul {
+    .mainMerged p,
+    .mainMerged h2,
+    .mainMerged h3,
+    .mainMerged h4,
+    .mainMerged ul {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
         border-radius: 0px;
         width: 100%;
         display: block;
-    }   
-    
+    }
+
     #image1 {
         background-repeat: no-repeat;
         background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
         background-position: 100% 40%, 100% 60%;
         height: auto;
-        background-color: rgba(255,255,230, 1);
+        background-color: rgba(255, 255, 230, 1);
         background-attachment: local;
     }
-    
+
 }
 
 
