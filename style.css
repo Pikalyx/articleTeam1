@@ -4,6 +4,9 @@
     --light: #ffffff;
     --dark: #333;
     --text-light: #666;
+    --blue: #039BE5;
+    --green: #30C231;
+    
 }
 
 * {
@@ -97,7 +100,7 @@ body {
 .nav-links a:hover {
     color: var(--primary);
 }
-
+/* Mobile Nav bar collapse */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -138,6 +141,13 @@ body {
     margin-bottom: 2rem;
 }
 
+.introduction {
+    padding: 5%;
+    background-color: var(--light);
+    margin: 5% 0%;
+    border-radius: 15px;
+}
+
 /* Each pair of mainLeft & mainRight in one row */
 .row {
     display: flex;
@@ -165,16 +175,25 @@ body {
 #image1 {
     background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
     background-position: 100% 40%, 100% 60%;
-    height: auto;
     background-color: rgba(255,255,230,1);
 }
 
+ /* Fix image to show up while gradient is present */
 #image2 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background-image: url("images/inaImage1.png"), url("images/inaImage2.png");
+    background-position: 100% 40%, 100% 70%;
 }
 
 #image3 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background-image: url("images/karlensImage1.png"), url("images/karlensImage2.png");
+    background-position: 100% 40%, 100% 70%;
+
+}
+
+#image4 {
+    background-image: url("images/mohammadImage1.png"), url("images/mohammadImage2.png");
+    background-position: 100% 40%, 100% 70%;
+
 }
 
 .mainMerged {
@@ -313,7 +332,9 @@ footer p {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
         border-radius: 0px;
-    }
+        width: 100%;
+        display: block;
+    }   
     
     #image1 {
         background-repeat: no-repeat;
