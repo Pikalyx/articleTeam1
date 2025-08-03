@@ -175,31 +175,48 @@ body {
 }
 
 #image1 {
-    background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
-    background-position: 100% 40%, 100% 60%;
-    background-color: rgba(255, 255, 230, 1);
+    background:
+        url("images/raisaImgOne.png"),
+        url("images/raisaImgOne.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Fix image to show up while gradient is present */
 #image2 {
     background:
-        linear-gradient(135deg, var(--blue), var(--green)),
         url("images/inaImage1.png"),
-        url("images/inaImage2.png");
-    background-position: 100% 40%, 100% 70%, center;
+        url("images/inaImage2.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 #image3 {
-    background-image: url("images/karlensImage1.png"), url("images/karlensImage2.png");
-    background-position: 100% 40%, 100% 70%;
-
+    background:
+        url("images/karlensImage1.png"),
+        url("images/karlensImage1.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
+
 
 #image4 {
     background-image: url("images/mohammadImage1.png"), url("images/mohammadImage2.png");
     background-position: 100% 40%, 100% 70%;
+
+    background:
+        url("images/mohammadImage1.png"),
+        url("images/mohammadImage2.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
@@ -215,6 +232,7 @@ body {
     padding: 20px;
     background-color: white;
     border-radius: 15px;
+    margin: 2.5% 0%;
 }
 
 /* Make sure each advertisement item fills the grid cell properly */
@@ -222,7 +240,6 @@ body {
     display: flex;
     flex-direction: column;
     height: auto;
-    /* Adaptive height - each item will size based on content */
 }
 
 .Game {
@@ -232,27 +249,42 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    margin: 5% 0%;
 }
 
 #game1:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game2:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game3:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
+    transition: transform 0.2s ease;
+}
+
+#game4:hover {
+    transform: scale(1.08);
+    transition: transform 0.2s ease;
+}
+
+#game5:hover {
+    transform: scale(1.08);
+    transition: transform 0.2s ease;
+}
+
+#game6:hover {
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game1 {
     background-image: url("images/danielLiuGame.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #game2 {
@@ -260,7 +292,19 @@ body {
 }
 
 #game3 {
-    background-image: url("images/anthonyImage.png");
+    background-image: url("images/anthonyGame.png");
+}
+
+#game4 {
+    background-image: url("images/frankGame.png");
+}
+
+#game5 {
+    background-image: url("images/stephanieGame.png");
+}
+
+#game6 {
+    background-image: url("images/geraldoGame.png");
 }
 
 /* Responsive design - stack on smaller screens */
