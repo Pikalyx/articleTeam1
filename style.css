@@ -117,22 +117,12 @@ body {
 }
 
 .titleScreen {
-    text-align: center;
-    color: var(--light);
-    margin-bottom: 2rem;
-    padding: 17rem 0rem;
-}
-
-.titleScreen h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.title {
-    font-style: italic;
     margin-bottom: 1rem;
+    padding: 20rem 0rem;
+    background: url(images/Headers.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Main Content */
@@ -176,8 +166,8 @@ body {
 
 #image1 {
     background:
-        url("images/raisaImgOne.png"),
-        url("images/raisaImgOne.png"),
+        url("images/raisaImage1.png"),
+        url("images/raisaImage2.png"),
         linear-gradient(135deg, var(--blue), var(--green));
     background-position: 100% 30%, 100% 80%, center;
     background-size: contain;
@@ -198,7 +188,7 @@ body {
 #image3 {
     background:
         url("images/karlensImage1.png"),
-        url("images/karlensImage1.png"),
+        url("images/karlensImage2.png"),
         linear-gradient(135deg, var(--blue), var(--green));
     background-position: 100% 30%, 100% 80%, center;
     background-size: contain;
@@ -207,9 +197,6 @@ body {
 
 
 #image4 {
-    background-image: url("images/mohammadImage1.png"), url("images/mohammadImage2.png");
-    background-position: 100% 40%, 100% 70%;
-
     background:
         url("images/mohammadImage1.png"),
         url("images/mohammadImage2.png"),
@@ -222,6 +209,7 @@ body {
 
 .mainMerged {
     display: none;
+    
 }
 
 .Advertise {
@@ -395,15 +383,19 @@ footer p {
         display: block;
     }
 
-    #image1 {
-        background-repeat: no-repeat;
-        background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
-        background-position: 100% 40%, 100% 60%;
-        height: auto;
-        background-color: rgba(255, 255, 230, 1);
-        background-attachment: local;
+    .mainMerged ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 0;
     }
 
+    .titleScreen {
+        padding: 10rem 0rem;
+        background: url(images/Headers.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }
 
 
