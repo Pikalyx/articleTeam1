@@ -394,16 +394,6 @@ footer p {
         width: 100%;
         display: block;
     }
-
-    #image1 {
-        background-repeat: no-repeat;
-        background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
-        background-position: 100% 40%, 100% 60%;
-        height: auto;
-        background-color: rgba(255, 255, 230, 1);
-        background-attachment: local;
-    }
-
 }
 
 
