@@ -4,6 +4,9 @@
     --light: #ffffff;
     --dark: #333;
     --text-light: #666;
+    --blue: #039BE5;
+    --green: #30C231;
+
 }
 
 * {
@@ -49,18 +52,19 @@ body {
     opacity: 0;
     visibility: hidden;
     transform: translateY(-100%);
-    
+
     /* Multiple transition properties for better compatibility */
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    
+
     /* Force hardware acceleration */
     -webkit-transform: translateY(-100%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
+
 .nav.show {
     opacity: 1;
     visibility: visible;
@@ -98,6 +102,7 @@ body {
     color: var(--primary);
 }
 
+/* Mobile Nav bar collapse */
 .mobile-menu {
     display: none;
     flex-direction: column;
@@ -116,10 +121,6 @@ body {
     color: var(--light);
     margin-bottom: 2rem;
     padding: 17rem 0rem;
-    background-image: url("images/underConstructionPlaceholder.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
 }
 
 .titleScreen h1 {
@@ -142,6 +143,13 @@ body {
     margin-bottom: 2rem;
 }
 
+.introduction {
+    padding: 5%;
+    background-color: var(--light);
+    margin: 5% 0%;
+    border-radius: 15px;
+}
+
 /* Each pair of mainLeft & mainRight in one row */
 .row {
     display: flex;
@@ -162,27 +170,54 @@ body {
 
 .mainLeft {
     background-repeat: no-repeat, no-repeat;
-    background-attachment:local;
+    background-attachment: local;
     background-size: 100%, 100%;
 }
 
 #image1 {
-    background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
-    background-position: 100% 40%, 100% 60%;
-    height: auto;
-    background-color: rgba(255,255,230,1);
+    background:
+        url("images/raisaImgOne.png"),
+        url("images/raisaImgOne.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
+/* Fix image to show up while gradient is present */
 #image2 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background:
+        url("images/inaImage1.png"),
+        url("images/inaImage2.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #image3 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background:
+        url("images/karlensImage1.png"),
+        url("images/karlensImage1.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
+
 #image4 {
-    background-image: url("images/underConstructionPlaceholder.jpg");
+    background-image: url("images/mohammadImage1.png"), url("images/mohammadImage2.png");
+    background-position: 100% 40%, 100% 70%;
+
+    background:
+        url("images/mohammadImage1.png"),
+        url("images/mohammadImage2.png"),
+        linear-gradient(135deg, var(--blue), var(--green));
+    background-position: 100% 30%, 100% 80%, center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 .mainMerged {
@@ -195,60 +230,61 @@ body {
     gap: 20px;
     /* Adjust spacing between grid items */
     padding: 20px;
-    margin: 2.5% 0%;
     background-color: white;
     border-radius: 15px;
+    margin: 2.5% 0%;
 }
 
 /* Make sure each advertisement item fills the grid cell properly */
-.Advertise div {
+.Advertise>div {
     display: flex;
     flex-direction: column;
-    height: auto; /* Adaptive height - each item will size based on content */
+    height: auto;
 }
 
 .Game {
     width: 100%;
-    min-height: 200px; /* Set a minimum height for the image containers */
+    min-height: 200px;
+    /* Set a minimum height for the image containers */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
+    margin: 5% 0%;
 }
 
 #game1:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game2:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game3:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game4:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game5:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game6:hover {
-    transform: scale(1.008);
+    transform: scale(1.08);
     transition: transform 0.2s ease;
 }
 
 #game1 {
     background-image: url("images/danielLiuGame.png");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #game2 {
@@ -274,15 +310,17 @@ body {
 /* Responsive design - stack on smaller screens */
 @media (max-width: 768px) {
     .Advertise {
-    grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
+        /* Single column on mobile */
     }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
     .Advertise {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns on tablets */
     }
-    
+
     .mainLeft {
         background-size: cover;
     }
@@ -344,24 +382,28 @@ footer p {
         color: white;
         background-size: 100%, 100%;
     }
-    
-    .mainMerged p, .mainMerged h2, .mainMerged h3, .mainMerged h4, .mainMerged ul {
+
+    .mainMerged p,
+    .mainMerged h2,
+    .mainMerged h3,
+    .mainMerged h4,
+    .mainMerged ul {
         background-color: rgba(0, 0, 0, 0.5);
         padding: 10px;
         border-radius: 0px;
         width: 100%;
         display: block;
     }
-    
+
     #image1 {
         background-repeat: no-repeat;
         background-image: url("images/raisaImgOne.png"), url("images/raisaImgTwo.png");
         background-position: 100% 40%, 100% 60%;
         height: auto;
-        background-color: rgba(255,255,230, 1);
+        background-color: rgba(255, 255, 230, 1);
         background-attachment: local;
     }
-    
+
 }
 
 
