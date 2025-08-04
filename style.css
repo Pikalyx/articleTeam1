@@ -17,7 +17,12 @@
 
 body {
     font-family: 'Heebo', sans-serif;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: 
+        url(images/Headers.png),
+        linear-gradient(135deg, var(--primary), var(--secondary));
+    background-position: 100% 0%, 100% 0%, top;
+    background-size: contain;
+    background-repeat: no-repeat;
     color: var(--dark);
     line-height: 1.6;
 }
@@ -219,6 +224,7 @@ body {
 
 .mainMerged {
     display: none;
+    
 }
 
 .Advertise {
@@ -390,6 +396,12 @@ footer p {
         border-radius: 0px;
         width: 100%;
         display: block;
+    }
+
+    .mainMerged ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        margin: 0;
     }
 }
 
