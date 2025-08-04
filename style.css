@@ -17,12 +17,7 @@
 
 body {
     font-family: 'Heebo', sans-serif;
-    background: 
-        url(images/Headers.png),
-        linear-gradient(135deg, var(--primary), var(--secondary));
-    background-position: 100% 0%, 100% 0%, top;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: var(--dark);
     line-height: 1.6;
 }
@@ -122,22 +117,12 @@ body {
 }
 
 .titleScreen {
-    text-align: center;
-    color: var(--light);
-    margin-bottom: 2rem;
-    padding: 17rem 0rem;
-}
-
-.titleScreen h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    background: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.title {
-    font-style: italic;
     margin-bottom: 1rem;
+    padding: 20rem 0rem;
+    background: url(images/Headers.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Main Content */
@@ -405,6 +390,14 @@ footer p {
         list-style-type: disc;
         padding-left: 20px;
         margin: 0;
+    }
+
+    .titleScreen {
+        padding: 10rem 0rem;
+        background: url(images/Headers.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
 
