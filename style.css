@@ -176,8 +176,8 @@ body {
 
 #image1 {
     background:
-        url("images/raisaImgOne.png"),
-        url("images/raisaImgOne.png"),
+        url("images/raisaImage1.png"),
+        url("images/raisaImage2.png"),
         linear-gradient(135deg, var(--blue), var(--green));
     background-position: 100% 30%, 100% 80%, center;
     background-size: contain;
@@ -198,7 +198,7 @@ body {
 #image3 {
     background:
         url("images/karlensImage1.png"),
-        url("images/karlensImage1.png"),
+        url("images/karlensImage2.png"),
         linear-gradient(135deg, var(--blue), var(--green));
     background-position: 100% 30%, 100% 80%, center;
     background-size: contain;
@@ -207,9 +207,6 @@ body {
 
 
 #image4 {
-    background-image: url("images/mohammadImage1.png"), url("images/mohammadImage2.png");
-    background-position: 100% 40%, 100% 70%;
-
     background:
         url("images/mohammadImage1.png"),
         url("images/mohammadImage2.png"),
